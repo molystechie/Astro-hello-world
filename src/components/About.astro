@@ -1,0 +1,33 @@
+---
+
+interface MolysTechie {
+    id: number;
+    title: string;
+    description: string;
+    founder: string;
+}
+
+const info: MolysTechie[] = [{
+    id: 1,
+    title: "MolysTechie",
+    description: "Tech Start up deals on Software development and selling tech gadgets",
+    founder: "John Lyimo"
+}
+];
+
+---
+
+<main class="w-full h-screen flex justify-center items-center">
+     {
+        info.map(data =>  
+        <div class="text-center">
+            <div key=id class="grid gap-2">
+                <h1 class="text-5xl font-bold bg-slate-300">{data.title}</h1>
+                <p>{data.description}</p>
+                <p>Founded by: {data.founder}</p>
+            </div>
+        </div>)
+    }  
+
+</main>
+
